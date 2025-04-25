@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      #new_user_form {
+        display: block;
+      }
+      #update_form {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="flex justify-center">
+      <!-- NEW FORM -->
+      <div
+        class="border-2 border-black w-1/3 mt-6 pt-6 bg-amber-500 text-cyan-700 rounded-xl"
+        id="new_user_form"
+      >
+        <h2 class="text-center text-2xl font-bold text-black">NEW-USER-FORM</h2>
+        <div class="flex justify-center mt-6">
+          <form action="" class="font-bold" id="user_form">
+            <label for="uname">Name :</label>
+            <input
+              type="text"
+              class="mb-6 border-2 border-black text-center rounded-xl text-black"
+              placeholder="Enter Your Name"
+              id="u_name"
+            />
+            <br />
+            <label for="email">E-mail :</label>
+            <input
+              type="email"
+              class="mb-6 border-2 border-black text-center rounded-xl text-black"
+              placeholder="Enter Your Email"
+              id="u_email"
+              />
+              <br />
+              <label for="phone">Phone :</label>
+              <input
+              type="tel"
+              placeholder="Enter Your Phone"
+              class="mb-6 border-2 border-black text-center rounded-xl text-black"
+              id="u_phone"
+            />
+            <br />
+            <div class="w-full flex justify-center">
+              <button
+                class="border-2 border-black px-4 text-center mb-6 text-neutral-200 bg-cyan-700 rounded-md hover:bg-neutral-200 hover:text-cyan-700"
+              >
+                SUBMIT
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- UPDATE FORM -->
+      <div
+        class="border-2 border-black w-1/3 mt-6 pt-6 bg-amber-500 text-cyan-700 rounded-xl"
+        id="update_form"
+      >
+        <h2 class="text-center text-2xl font-bold text-black">UPDATE FORM</h2>
+        <div class="flex justify-center mt-6">
+          <form action="" class="font-bold" id="update_user_form" >
+            <label for="uname">Name :</label>
+            <input
+              type="text"
+              id="uname"
+              class="mb-6 border-2 border-black text-center rounded-xl text-black"
+            />
+            <br />
+            <label for="uname">E-mail :</label>
+            <input
+              type="text"
+              id="email"
+              class="mb-6 border-2 border-black text-center rounded-xl text-black"
+            />
+            <br />
+            <label for="uname">Phone :</label>
+            <input
+              type="tel"
+              id="phone"
+              class="mb-6 border-2 border-black text-center rounded-xl text-black"
+            />
+            <br />
+            <div class=" w-full flex justify-center">
+            <button
+              class="border-2 border-black px-4 text-center mb-6  text-neutral-200 bg-cyan-700 rounded-md hover:bg-neutral-200 hover:text-cyan-700"
+              onclick="update_user()"
+            >
+              UPDATE
+            </button>
+        </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <br />
+    <div class="flex justify-center">
+      <table class="w-11/12 divide-y divide-gray-300">
+        <thead class="bg-amber-500 text-black">
+          <tr class="border-2 border-black">
+            <th
+              class="px-6 py-3 text-center text-thin font-extrabold uppercase"
+            >
+              ID
+            </th>
+            <th
+              class="px-6 py-3 text-center text-thin font-extrabold uppercase"
+            >
+              Name
+            </th>
+            <th
+              class="px-6 py-3 text-center text-thin font-extrabold uppercase"
+            >
+              Email
+            </th>
+            <th
+              class="px-6 py-3 text-center text-thin font-extrabold uppercase"
+            >
+              Phone
+            </th>
+            <th
+              class="px-6 py-3 text-center text-thin font-extrabold uppercase"
+            >
+              UPDATE
+            </th>
+            <th
+              class="px-6 py-3 text-center text-thin font-extrabold uppercase"
+            >
+              DELETE
+            </th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200" id="tbody">
+          
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
